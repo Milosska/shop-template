@@ -1,7 +1,9 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+
 import { PrivateRoute } from "../PrivateRoute/PrivateRoute";
 import { RestrictedRoute } from "../RestrictedRoute/RestrictedRoute";
+import { GlobalLayout } from "../../global/GlobalLayout/GlobalLayout";
 
 const HomePage = lazy(() => import("@/pages/public/HomePage/HomePage"));
 const ProductPage = lazy(() =>
@@ -32,33 +34,35 @@ export const AppRouter = () => {
   return (
     <Suspense fallback={<div>Loader...</div>}>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/:cathegory" element={<CathegoryPage />} />
-        <Route path="/:cathegory/:productId" element={<ProductPage />} />
-        <Route path="/cart" element={<ShoppingCartPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={<GlobalLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/:cathegory" element={<CathegoryPage />} />
+          <Route path="/:cathegory/:productId" element={<ProductPage />} />
+          <Route path="/cart" element={<ShoppingCartPage />} />
+          <Route path="*" element={<NotFoundPage />} />
 
-        <Route
-          path="/login"
-          element={<RestrictedRoute component={<LoginPage />} />}
-        />
-        <Route
-          path="/register"
-          element={<RestrictedRoute component={<RegistrationPage />} />}
-        />
+          <Route
+            path="/login"
+            element={<RestrictedRoute component={<LoginPage />} />}
+          />
+          <Route
+            path="/register"
+            element={<RestrictedRoute component={<RegistrationPage />} />}
+          />
 
-        <Route
-          path="/profile"
-          element={<PrivateRoute component={<ProfilePage />} />}
-        />
-        <Route
-          path="/orders"
-          element={<PrivateRoute component={<OrdersPage />} />}
-        />
-        <Route
-          path="/favorite"
-          element={<PrivateRoute component={<FavoritePage />} />}
-        />
+          <Route
+            path="/profile"
+            element={<PrivateRoute component={<ProfilePage />} />}
+          />
+          <Route
+            path="/orders"
+            element={<PrivateRoute component={<OrdersPage />} />}
+          />
+          <Route
+            path="/favorite"
+            element={<PrivateRoute component={<FavoritePage />} />}
+          />
+        </Route>
       </Routes>
     </Suspense>
   );
