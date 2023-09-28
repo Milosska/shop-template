@@ -5,11 +5,14 @@ export const Container = styled.div`
   flex-direction: column;
 
   min-height: 100vh;
+
+  background-color: var(--primary-bg-color, #ffffff);
+  color: var(--primary-text-color, #000000);
 `;
 
 export const Header = styled.header`
   padding: 10px 20px;
-  background-color: #67b1f7;
+  background-color: var(--accent-bg-color, blue);
 `;
 
 export const Main = styled.main`
@@ -18,5 +21,5 @@ export const Main = styled.main`
 
 export const Footer = styled.footer`
   padding: 10px 20px;
-  background-color: #67b1f7;
+  background-color: var(--accent-bg-color, blue);
 `;
