@@ -1,7 +1,8 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
-import { Loader } from "../Loader/Loader";
+import { Loader } from "../../global/Loader/Loader";
+import { GoUpButton } from "../GoUpButton/GoUpButton";
 import { Container, Header, Main, Footer } from "./GlobalLayout.styled";
 
 export const GlobalLayout = () => {
@@ -18,6 +19,7 @@ export const GlobalLayout = () => {
       <Footer>
         <p>Footer</p>
       </Footer>
+      <GoUpButton />
     </Container>
   );
 };
