@@ -25,6 +25,19 @@ Private:
 - orders history page
 - favorite products page
 
+## Styling
+
+Styling is made using styled-components library. Template styling includes GlobalStyles file with base drops and StyleVariables file where all the repeating variables gathered.
+
+## Included components
+
+Next components are included and swithed:
+
+- global layout
+- router (with both private and restricted routes mechanics)
+- loader
+- scroll-to-top
+
 ## Tech Stack
 
 <code><img height="50" src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" title="React" /></code>
