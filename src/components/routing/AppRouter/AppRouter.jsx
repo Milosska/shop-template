@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { PrivateRoute } from "../PrivateRoute/PrivateRoute";
 import { RestrictedRoute } from "../RestrictedRoute/RestrictedRoute";
 import { GlobalLayout } from "../../global/GlobalLayout/GlobalLayout";
+import { Loader } from "../../global/Loader/Loader";
 
 const HomePage = lazy(() => import("@/pages/public/HomePage/HomePage"));
 const ProductPage = lazy(() =>
@@ -32,7 +33,7 @@ const FavoritePage = lazy(() =>
 
 export const AppRouter = () => {
   return (
-    <Suspense fallback={<div>Loader...</div>}>
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<GlobalLayout />}>
           <Route index element={<HomePage />} />

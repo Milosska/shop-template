@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
+import { Loader } from "../Loader/Loader";
 import { Container, Header, Main, Footer } from "./GlobalLayout.styled";
 
 export const GlobalLayout = () => {
@@ -10,7 +11,7 @@ export const GlobalLayout = () => {
         <p>Header</p>
       </Header>
       <Main>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </Main>
