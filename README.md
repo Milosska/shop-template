@@ -33,7 +33,7 @@ Styling is made using styled-components library. Template styling includes Globa
 
 Next components are included and swithed:
 
-- global layout
+- global layout (with mobile menu included)
 - router (with both private and restricted routes mechanics)
 - loader
 - scroll-to-top

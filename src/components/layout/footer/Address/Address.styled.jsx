@@ -12,8 +12,12 @@ export const List = styled.ul`
   margin: 0;
 
   li {
-    &:not(:last-child) {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 765px) {
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 

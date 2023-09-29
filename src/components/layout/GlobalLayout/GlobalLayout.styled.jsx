@@ -20,9 +20,15 @@ export const Main = styled.main`
 `;
 
 export const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
-
   padding: 10px 20px;
   background-color: var(--accent-bg-color, blue);
+
+  text-align: center;
+
+  @media screen and (min-width: 765px) {
+    display: flex;
+    justify-content: space-between;
+
+    text-align: start;
+  }
 `;
