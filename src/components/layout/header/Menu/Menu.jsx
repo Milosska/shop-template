@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
-import { StyledList } from "./Menu.styled";
+import { DropdownMenu } from "../DropdownMenu/DropdownMenu";
+import { StyledList, AuthList } from "./Menu.styled";
 
 export const Menu = () => {
   const isLoggedIn = true;
@@ -14,32 +15,19 @@ export const Menu = () => {
         <li>
           <NavLink to="/cart">Cart</NavLink>
         </li>
-        {isLoggedIn && (
-          <>
-            <li>
-              <NavLink to="/profile">Profile</NavLink>
-            </li>
-            <li>
-              <NavLink to="/orders">Orders</NavLink>
-            </li>
-            <li>
-              <NavLink to="/favorite">Favorite</NavLink>
-            </li>
-          </>
-        )}
       </StyledList>
 
       {isLoggedIn ? (
-        <p>Hello, User!</p>
+        <DropdownMenu />
       ) : (
-        <StyledList>
+        <AuthList>
           <li>
             <NavLink to="/login">Sign In</NavLink>
           </li>
           <li>
             <NavLink to="/register">Sign Up</NavLink>
           </li>
-        </StyledList>
+        </AuthList>
       )}
     </>
   );

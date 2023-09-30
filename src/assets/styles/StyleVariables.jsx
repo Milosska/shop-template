@@ -12,7 +12,9 @@ export const StyleVariables = createGlobalStyle`
   --primary-text-color: #111111;
   --accent-text-color: #ffffff;
 
-    --link-hover-color: #2622a0;
+  /* decoration colors */
+  --decorative-elems-color: #2622a0;
+--link-hover-color: #2622a0;
 
 
   /* animations */

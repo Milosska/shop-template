@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const StyledNav = styled.nav`
+  position: relative;
+
   display: flex;
-  justify-content: space-between;
+  gap: 50px;
   align-items: center;
 
   color: var(--primary-text-color, #000000);
