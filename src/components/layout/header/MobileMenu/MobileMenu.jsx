@@ -2,11 +2,14 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MdMenu, MdClose } from "react-icons/md";
 
+import { useSelector } from "react-redux";
+import { selectIsLoggedIn } from "@/redux/selectors";
+
 import { ToggleBtn, MenuContainer, List } from "./MobileMenu.styled";
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const isLoggedIn = true;
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const handleToggle = () => {
     return isOpen ? setIsOpen(false) : setIsOpen(true);
