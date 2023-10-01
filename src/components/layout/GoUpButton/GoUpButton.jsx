@@ -4,8 +4,6 @@ import { Icon, Button } from "./GoUpButton.styled";
 export const GoUpButton = () => {
   const { y } = useWindowScroll();
 
-  console.log(y);
-
   const handleClick = () => {
     if (y > 0) {
       window.scrollTo({

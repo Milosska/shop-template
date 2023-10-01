@@ -17,6 +17,7 @@ export const Header = styled.header`
 
 export const Main = styled.main`
   flex: 1;
+  padding: 10px 20px;
 `;
 
 export const Footer = styled.footer`

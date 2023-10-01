@@ -39,6 +39,8 @@ Next components are included and swithed:
 
 - global layout (with mobile menu included)
 - router (with both private and restricted routes mechanics)
+- product card
+- product card list
 - loader
 - scroll-to-top
 
