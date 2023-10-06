@@ -1,14 +1,16 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import prodPh from "@/assets/images/placeholders/product-card-min.jpg";
 
 import { Card, DataThumb, Title } from "./ProductCard.styled";
 
 export const ProductCard = ({ item }) => {
+  const location = useLocation();
+
   return (
     <Card>
-      <Link to={`/${item.cathegoryId}/${item.id}`}>
+      <Link to={`/${item.cathegoryId}/${item.id}`} state={{ from: location }}>
         <img src={prodPh} alt={item.name} />
         <DataThumb>
           <Title>{item.name}</Title>

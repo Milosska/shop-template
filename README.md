@@ -41,6 +41,7 @@ Next components are included and swithed:
 - router (with both private and restricted routes mechanics)
 - product card
 - product card list
+- link button
 - loader
 - scroll-to-top
 
