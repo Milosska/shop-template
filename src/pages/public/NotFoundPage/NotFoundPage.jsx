@@ -1,7 +1,15 @@
+import { LinkBtn } from "@/components/global/LinkBtn/LinkBtn";
+import { Container, Thumb, Message } from "./NotFoundPage.styled";
+
 const NotFoundPage = () => {
   return (
     <>
-      <h2>Not Found Page</h2>
+      <Container>
+        <Thumb>
+          <Message>404 | Page Not Found</Message>
+          <LinkBtn text={"Homepage"} address={"/"} />
+        </Thumb>
+      </Container>
     </>
   );
 };
