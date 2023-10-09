@@ -1,7 +1,11 @@
+import { ShoppingCartList } from "@/components/cart/ShoppingCartList/ShoppingCartList";
+
 const ShoppingCartPage = () => {
   return (
     <>
-      <h2>Shopping Cart Page</h2>
+      <section>
+        <ShoppingCartList />
+      </section>
     </>
   );
 };

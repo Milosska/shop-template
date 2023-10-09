@@ -14,7 +14,8 @@ export const StyleVariables = createGlobalStyle`
 
   /* decoration colors */
   --decorative-elems-color: #2622a0;
---link-hover-color: #2622a0;
+  --link-hover-color: #2622a0;
+  --alert-color: #b8293a;
 
 
   /* animations */
