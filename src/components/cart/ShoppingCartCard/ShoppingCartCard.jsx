@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { AiFillDelete } from "react-icons/ai";
 import { FaPlus, FaMinus } from "react-icons/fa";
+
+import { useDispatch } from "react-redux";
+import { changeProductInCart } from "@/redux/cart/cartSlice.js";
 
 import prodPh from "@/assets/images/placeholders/product-card-min.jpg";
 
@@ -20,6 +23,11 @@ import {
 export const ShoppingCartCard = ({ item }) => {
   const [quantity, setQuantity] = useState(1);
   const location = useLocation();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(changeProductInCart({ id: item.id, quantity }));
+  }, [quantity, item.id, dispatch]);
 
   const handleIncrement = () => {
     setQuantity((prevState) => prevState + 1);

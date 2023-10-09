@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Link, useLocation } from "react-router-dom";
 
 import prodPh from "@/assets/images/placeholders/product-card-min.jpg";
-
 import { Card, DataThumb, Title } from "./ProductCard.styled";
 
 export const ProductCard = ({ item }) => {

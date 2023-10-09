@@ -6,6 +6,10 @@ export const PageTitle = styled.h2`
 
 export const Text = styled.p`
   margin-top: 10px;
+
+  &:last-of-type {
+    margin-bottom: 10px;
+  }
 `;
 
 export const TextLabel = styled.span`
